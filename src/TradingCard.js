@@ -117,6 +117,7 @@ export class TradingCard extends LitElement {
       <slot slot="agilestat"name="agilestat"></slot>
       <slot slot="strengthstat"name="strengthstat"></slot>
       <slot slot="speedstat"name="speedstat"></slot>
+      <slot slot="endurancestat"name="endurancestat"></slot>
 
       </tc-statinfo>
     </div>

@@ -6,31 +6,14 @@ export class StatInfo extends SimpleColors {
   constructor() {
     super();
     this.accentColor = 'black';
-    this.agilestat='3';
 
     // map function
     this.ctitle = {
       stat1: "Agile",
       stat2: "Strength",
       stat3: "Speed",
+      stat4: "Endurance"
     };
-
-    // this.cardData = [
-    //   {
-    //     name: 'Red Panda',
-    //     // image: '../assets/WinkingRedPanda.jpg',
-    //     agile: '43',
-    //     strength: '32',
-    //     speed: '28',
-    //   },
-    //   {
-    //     name: 'Raccoon',
-    //     // image: '../assets/Rac.jpg',
-    //     agile: '65',
-    //     stength: '45',
-    //     speed: '52',
-    //   }
-    // ];
   }
 
   static get tag() {
@@ -44,6 +27,7 @@ export class StatInfo extends SimpleColors {
       agilestat: { type: String, reflect: true },
       strengthstat: { type: String, reflect: true },
       speedstat: {type: String, reflect: true},
+      endurancestat: {type: String, reflect: true},
     };
   }
 
@@ -92,6 +76,13 @@ export class StatInfo extends SimpleColors {
           /* up right down left */
           border-width: 8px 0px 8px 0px;
         }
+
+        .statcontainer3{
+          padding: 7px;
+          border-style: solid;
+          border-color: #212529;
+          border-width: 8px 0px 0px 0px;
+        }
       `,
     ];
   }
@@ -118,6 +109,12 @@ export class StatInfo extends SimpleColors {
       <div class="statcontainer">
        <p class="word"> ${this.ctitle.stat3}</p>
        <p class="num"><slot name="speedstat">${this.speedstat}</slot></p> 
+      </div>  
+      
+      
+      <div class="statcontainer3">
+       <p class="word"> ${this.ctitle.stat4}</p>
+       <p class="num"><slot name="endurancestat">${this.endurancestat}</slot></p> 
       </div>  
       
   </div> 
