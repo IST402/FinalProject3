@@ -10,6 +10,7 @@
   <style>
     html,
     body {
+      background-color: #292929;
       margin: 0;
       padding: 50px;
       font-family: sans-serif;
@@ -20,11 +21,17 @@
     .menu {
       display: flex;
       justify-content: space-evenly;
+      background-color: white;
+      border-radius: 25px;
+      box-shadow: 8px 8px #F4BA2B;
     }
     .menu li {
       display: inline-flex;
       font-weight: bold;
+      font-size: 25px;
       padding: 40px;
+      color: white;
+      
     }
     .joyful {
       font-size: 2em;
@@ -39,14 +46,30 @@
     <li><a href="/hax.html">HAX, card demo</a></li>
   </ul>
   <div class="wrapper">
-    <trading-card need="joy">Some inner text that will render out</trading-card>
-    <word-count>
-      <trading-card need="nothing"><div>You feel much shame.</div></trading-card>
-    </word-count>
+
+    <!-- Red Panda -->
+    <trading-card photoSrc="../assets/WinkingRedPanda.jpg">
+      <div slot="header">red panda</div>
+
+      <div slot="agilestat">45</div>
+      <div slot="strengthstat">32</div>
+      <div slot="speedstat">28</div>
+    </trading-card>
+
+    <!-- Raccoon -->
+    <trading-card photoSrc="../assets/Rac.jpg">
+      <div slot="header">raccoon</div>
+
+      <div slot="agilestat">65</div>
+      <div slot="strengthstat">45</div>
+      <div slot="speedstat">52</div>
+    </trading-card>
+   
   </div>
+
+  
   <script type="module">
     import "./trading-card.js";
-    import "@lrnwebcomponents/word-count/word-count.js";
   </script>
 </body>
 

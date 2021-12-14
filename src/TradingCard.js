@@ -12,13 +12,24 @@ export class TradingCard extends LitElement {
   // HTMLElement life-cycle, built in; use this for setting defaults
   constructor() {
     super();
-    this.need = 'all need to succeed';
+    this.photoSrc = "'../assets/WinkingRedPanda.jpg'";
+
+    setTimeout(() => {
+      // import('./Header.js');
+      import('./Photo.js');
+      import('./StatInfo.js');
+    }, 0);
+  
   }
+
+  
 
   // properties that you wish to use as data in HTML, CSS, and the updated life-cycle
   static get properties() {
     return {
       need: { type: String, reflect: true },
+      name: { type: String, reflect: true },
+      photoSrc: { type: String, reflect: true },
     };
   }
 
@@ -57,10 +68,28 @@ export class TradingCard extends LitElement {
     return css`
       :host {
         display: block;
+        background-color: #F4BA2B;
+        width: 300px;
+        border-radius: 10px;
+        margin: 100px;
+        box-shadow: 0 0 0 .6em #020202,
+              0 0 0 2.1em white;
+        /* margin: 4em;
+        padding:1em; */
       }
-      :host([need='joy']) {
-        color: yellow;
-        background-color: black;
+
+
+      .header{
+        border: 3px #212529;
+          display: flex;
+          flex-direction: column;
+          /* padding: 2px; */
+          font-family: 'Bebas Neue', sans-serif;
+          text-transform: uppercase;
+          font-weight: bolder;
+          color: var(--simple-colors-default-theme-accent-8);
+          margin: 9px;
+          font-size: 20px;
       }
     `;
   }
@@ -68,9 +97,31 @@ export class TradingCard extends LitElement {
   // HTML - specific to Lit
   render() {
     return html`
-      <h1>Make me awesome</h1>
-      <p>Build the future we ${this.need}.</p>
-      <slot></slot>
+    <!-- <div class="header">
+      <tc-header></tc-header>
+    </div> -->
+
+    <div class="header">
+      <slot name="header">
+        <p> ${this.name}</p>
+      </slot>
+    </div>
+      
+    <div class="image">
+        <tc-photo image="${this.photoSrc}"></tc-photo>
+    </div>
+
+    <div>
+      <tc-statinfo>
+        
+      <slot slot="agilestat"name="agilestat"></slot>
+      <slot slot="strengthstat"name="strengthstat"></slot>
+      <slot slot="speedstat"name="speedstat"></slot>
+
+      </tc-statinfo>
+    </div>
+
+
     `;
   }
 
@@ -80,6 +131,15 @@ export class TradingCard extends LitElement {
    * haxProperties integration via file reference
    */
   static get haxProperties() {
-    return new URL(`../lib/trading-card.haxProperties.json`, import.meta.url).href;
+    return new URL(`../lib/trading-card.haxProperties.json`, import.meta.url).href; 
+
+    
+
+    
+
+    
+
+    
+
   }
 }
