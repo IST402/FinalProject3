@@ -122,8 +122,6 @@ export class TradingCard extends LitElement {
 
       </tc-statinfo>
     </div>
-
-
     `;
   }
 
