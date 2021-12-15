@@ -44,12 +44,8 @@ export class StatInfo extends SimpleColors {
           /* border: 2px dashed blue; */
           display: flex;
           flex-direction: column;
-          /* width: 100%; */
         }
 
-        .container {
-          justify-content: center;
-        }
 
         .word {
           text-align: left;
@@ -62,19 +58,22 @@ export class StatInfo extends SimpleColors {
           margin: 0px;
           font-size: 19px;
         }
-        
 
-        .statcontainer{
-          padding: 7px;
-        
+        .statcontainer1{
+          padding: 10px;
+          display: grid;
+          grid-template-columns: 50px 1fr;
+          /* width: 100%; */
         }
 
         .statcontainer2{
-          padding: 7px;
+          padding: 10px;
           border-style: solid;
           border-color: #212529;
           /* up right down left */
           border-width: 8px 0px 8px 0px;
+          display: grid;
+          grid-template-columns: 50px 1fr;
         }
 
         .statcontainer3{
@@ -82,6 +81,8 @@ export class StatInfo extends SimpleColors {
           border-style: solid;
           border-color: #212529;
           border-width: 8px 0px 0px 0px;
+          display: grid;
+          grid-template-columns: 50px 1fr;
         }
       `,
     ];
@@ -93,27 +94,25 @@ export class StatInfo extends SimpleColors {
 
 
     <div class="container">
-    
-
-    <div class="statcontainer">
-       <div class="word"> ${this.ctitle.stat1}</div>
+      <div class="statcontainer1">
+       <div class="word">${this.ctitle.stat1}</div>
        <div class="num"><slot name="agilestat">${this.agilestat}</slot></div>
       </div>  
 
 
       <div class="statcontainer2">
-       <p class="word"> ${this.ctitle.stat2}</p>
-       <p class="num"><slot name="strengthstat">${this.strengthstat}</slot> </p>
+       <p class="word">${this.ctitle.stat2}</p>
+       <p class="num"><slot name="strengthstat">${this.strengthstat}</slot></p>
       </div>
 
-      <div class="statcontainer">
-       <p class="word"> ${this.ctitle.stat3}</p>
+      <div class="statcontainer1">
+       <p class="word">${this.ctitle.stat3}</p>
        <p class="num"><slot name="speedstat">${this.speedstat}</slot></p> 
       </div>  
       
       
       <div class="statcontainer3">
-       <p class="word"> ${this.ctitle.stat4}</p>
+       <p class="word">${this.ctitle.stat4}</p>
        <p class="num"><slot name="endurancestat">${this.endurancestat}</slot></p> 
       </div>  
       
