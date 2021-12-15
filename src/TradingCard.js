@@ -78,8 +78,6 @@ export class TradingCard extends LitElement {
         margin: 100px;
         box-shadow: 0 0 0 .6em #020202,
               0 0 0 2.1em white;
-        /* margin: 4em;
-        padding:1em; */
       }
 
 
@@ -114,12 +112,10 @@ export class TradingCard extends LitElement {
 
     <div>
       <tc-statinfo>
-        
       <slot slot="agilestat"name="agilestat">${this.agilestat}</slot>
       <slot slot="strengthstat"name="strengthstat">${this.strengthstat}</slot>
       <slot slot="speedstat"name="speedstat">${this.speedstat}</slot>
       <slot slot="endurancestat"name="endurancestat">${this.endurancestat}</slot>
-
       </tc-statinfo>
     </div>
     `;
@@ -132,14 +128,5 @@ export class TradingCard extends LitElement {
    */
   static get haxProperties() {
     return new URL(`../lib/trading-card.haxProperties.json`, import.meta.url).href; 
-
-    
-
-    
-
-    
-
-    
-
   }
 }
