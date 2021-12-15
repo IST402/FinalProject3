@@ -13,12 +13,6 @@
     "settings": {
       "configure": [
         {
-          "property": "need",
-          "title": "Need",
-          "description": "What we all need",
-          "inputMethod": "textfield"
-        },
-        {
           "property": "name",
           "title": "Header",
           "description": "Name of the animal",
@@ -42,7 +36,7 @@
           "description": "Second Stat of Card",
           "inputMethod": "textfield"
         },
-        {"property": "speedtat",
+        {"property": "speedstat",
           "title": "Stat Num 3",
           "description": "Third Stat of Card",
           "inputMethod": "textfield"
@@ -68,7 +62,7 @@
             "speedstat":"28",
             "endurancestat":"22"
         },
-        "content": "<p>Some internal slotted content</p>"
+        "content": "<pSome internal slotted content</p>"
       }
     ]
   }
