@@ -63,7 +63,6 @@ export class StatInfo extends SimpleColors {
           padding: 10px;
           display: grid;
           grid-template-columns: 50px 1fr;
-          /* width: 100%; */
         }
 
         .statcontainer2{
@@ -95,8 +94,8 @@ export class StatInfo extends SimpleColors {
 
     <div class="container">
       <div class="statcontainer1">
-       <div class="word">${this.ctitle.stat1}</div>
-       <div class="num"><slot name="agilestat">${this.agilestat}</slot></div>
+       <p class="word">${this.ctitle.stat1}</p>
+       <p class="num"><slot name="agilestat">${this.agilestat}</slot></p>
       </div>  
 
 
