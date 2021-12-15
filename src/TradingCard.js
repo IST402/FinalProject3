@@ -15,7 +15,6 @@ export class TradingCard extends LitElement {
     this.photoSrc = "'../assets/WinkingRedPanda.jpg'";
 
     setTimeout(() => {
-      // import('./Header.js');
       import('./Photo.js');
       import('./StatInfo.js');
     }, 0);
@@ -102,9 +101,6 @@ export class TradingCard extends LitElement {
   // HTML - specific to Lit
   render() {
     return html`
-    <!-- <div class="header">
-      <tc-header></tc-header>
-    </div> -->
 
     <div class="header">
       <slot name="header">
