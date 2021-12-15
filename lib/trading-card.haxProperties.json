@@ -17,6 +17,41 @@
           "title": "Need",
           "description": "What we all need",
           "inputMethod": "textfield"
+        },
+        {
+          "property": "name",
+          "title": "Header",
+          "description": "Name of the animal",
+          "inputMethod": "textfield"
+        },
+        {
+          "property": "photoSrc",
+          "title": "Image",
+          "description": "Image of the Animal",
+          "inputMethod": "textfield"
+        },
+        {
+          "property": "agilestat",
+          "title": "Stat Num 1",
+          "description": "First Stat of Card",
+          "inputMethod": "textfield"
+        },
+        {
+          "property": "strengthstat",
+          "title": "Stat Num 2",
+          "description": "Second Stat of Card",
+          "inputMethod": "textfield"
+        },
+        {"property": "speedtat",
+          "title": "Stat Num 3",
+          "description": "Third Stat of Card",
+          "inputMethod": "textfield"
+        },
+        {
+          "property": "endurancestat",
+          "title": "Stat Num 4",
+          "description": "Fourth Stat of Card",
+          "inputMethod": "textfield"
         }
       ],
       "advanced": [
@@ -24,9 +59,14 @@
     },
     "demoSchema": [
       {
-        "tag": "rename-me",
+        "tag": "trading-card",
         "properties": {
-            "need": "the future"
+            "name": "red panda",
+            "photoSrc": "",
+            "agilestat": "43",
+            "strengthstat": "32",
+            "speedstat":"28",
+            "endurancestat":"22"
         },
         "content": "<p>Some internal slotted content</p>"
       }
