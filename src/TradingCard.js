@@ -30,6 +30,11 @@ export class TradingCard extends LitElement {
       need: { type: String, reflect: true },
       name: { type: String, reflect: true },
       photoSrc: { type: String, reflect: true },
+      ctitle: {type:Object},
+      agilestat: { type: String, reflect: true },
+      strengthstat: { type: String, reflect: true },
+      speedstat: {type: String, reflect: true},
+      endurancestat: {type: String, reflect: true},
     };
   }
 
@@ -114,10 +119,10 @@ export class TradingCard extends LitElement {
     <div>
       <tc-statinfo>
         
-      <slot slot="agilestat"name="agilestat"></slot>
-      <slot slot="strengthstat"name="strengthstat"></slot>
-      <slot slot="speedstat"name="speedstat"></slot>
-      <slot slot="endurancestat"name="endurancestat"></slot>
+      <slot slot="agilestat"name="agilestat">${this.agilestat}</slot>
+      <slot slot="strengthstat"name="strengthstat">${this.strengthstat}</slot>
+      <slot slot="speedstat"name="speedstat">${this.speedstat}</slot>
+      <slot slot="endurancestat"name="endurancestat">${this.endurancestat}</slot>
 
       </tc-statinfo>
     </div>
